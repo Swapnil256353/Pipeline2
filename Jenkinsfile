@@ -21,6 +21,7 @@ stage ('Archive Artifacts'){
 }
 	
 stage ('Deployment'){
-	sh 'cp target/*.war /opt/tomcat8/webapps'
+	cd /var/lib/jenkins/.m2/repository/com/java/example/java-example/1.0-SNAPSHOT
+	cp java-example-1.0-SNAPSHOT.war /opt/tomcat/webapps
 }
 }
