@@ -17,7 +17,7 @@ stage ('Sonar Analysis'){
 }
 
 stage ('Archive Artifacts'){
-	archiveArtifacts artifacts: 'target/*.war'
+	archiveArtifacts artifacts: '/var/lib/jenkins/.m2/repository/com/java/example/java-example/1.0-SNAPSHOT/*.war'
 }
 	
 stage ('Deployment'){
